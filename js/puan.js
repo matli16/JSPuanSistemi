@@ -20,46 +20,46 @@ if(examGrade>0 && examGrade<=100)
     info.classList.add('text-succes')
     if(examGrade>=90)
     {
-        textInfo +="Tebrikler AA İle geçtiniz"
+        textInfo +=`Tebrikler AA İle geçtiniz. <br> Notunuz:  `
     }
     else if(examGrade>=85)
     {
-        textInfo +="tebrikler BA ile geçtiniz"
+        textInfo +="Tebrikler BA ile geçtiniz. <br> Notunuz: "
     }
     else if(examGrade>=80)
     {
-        textInfo +="tebrikler BB ile geçtiniz"
+        textInfo +="Tebrikler BB ile geçtiniz. <br> Notunuz: "
     }
     else if(examGrade>=75)
     {
-        textInfo +="tebrikler CB ile geçtiniz"
+        textInfo +="Tebrikler CB ile geçtiniz. <br> Notunuz: "
     }
     else if(examGrade>=70)
     {
-        textInfo +="tebrikler CC ile geçtiniz"
+        textInfo +="Tebrikler CC ile geçtiniz. <br> Notunuz: "
     }
     else if(examGrade>=65)
     {
-        textInfo +="tebrikler DC ile geçtiniz"
+        textInfo +="Tebrikler DC ile geçtiniz. <br> Notunuz: "
     }
     else if(examGrade>=60)
     {
-        textInfo +="tebrikler DD ile geçtiniz"
+        textInfo +="Tebrikler DD ile geçtiniz. <br> Notunuz: "
     }
     else if(examGrade>=50)
     {
-        textInfo +="tebrikler FD ile geçtiniz"
+        textInfo +="Tebrikler FD ile geçtiniz. <br> Notunuz: "
     }
     else
     {
-        textInfo= `${FROWN} Üzgünüm Malesef Kaldınız`
+        textInfo= `${FROWN} Üzgünüm Malesef Kaldınız!`
         info.classList.remove('text-succes')
         info.classList.add('text-danger')
     }
 }
 else
 {
-    textInfo="lütfen 0-100 aralığında bir sayı giriniz"
+    textInfo="Lütfen 0-100 Aralığında Bir Puan Giriniz!.. <br> Girdiğiniz Puan:"
 }
-info.innerHTML=`${textInfo}`
+info.innerHTML=`${textInfo} ${examGrade}`
 }
