@@ -13,9 +13,11 @@ const FROWN = `
 
 let examGrade=prompt("notunuzu giriniz:")
 let textInfo;
+let info=document.querySelector("#info");
 if(examGrade>0 && examGrade<=100)
 {
     textInfo=SMILE;
+    info.classList.add('text-succes')
     if(examGrade>=90)
     {
         textInfo +="Tebrikler AA İle geçtiniz"
@@ -51,12 +53,13 @@ if(examGrade>0 && examGrade<=100)
     else
     {
         textInfo= `${FROWN} Üzgünüm Malesef Kaldınız`
+        info.classList.remove('text-succes')
+        info.classList.add('text-danger')
     }
 }
 else
 {
     textInfo="lütfen 0-100 aralığında bir sayı giriniz"
 }
-let info=document.querySelector("#info");
 info.innerHTML=`${textInfo}`
 }
